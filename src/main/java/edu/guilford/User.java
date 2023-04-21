@@ -71,15 +71,19 @@ public class User {
     public static void main(String[] args) {
     }
     
-    //generate password method
+    //**generate password method**
     public void generatePassword() {
+    //add the first 3 letters of the name to the password and makes it upper case
     password += name.substring(0, 3).toUpperCase();
+    //add the first two letters of the birth month to the password and makes it lowercase 
     password += birthMonth.substring(0, 2).toLowerCase();
+    //adds the second and third letters of the color to the password 
     password += color.substring(1, 2);
     //add a random special character to the password
     String specialCharacters = "!@#$%^&*()_+";
     int randomIndex = (int) (Math.random() * specialCharacters.length());
     password += specialCharacters.substring(randomIndex, randomIndex + 1);
+    //adds the first 2 letters of the username to the password
     password += username.substring(0, 2);
     }
 
